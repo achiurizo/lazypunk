@@ -108,3 +108,7 @@ require("lazypunk").load("<name>")
 
 Regenerate and the theme, both showcases, and the README Variants entry all
 appear.
+
+## License
+
+[MIT](LICENSE) © Arthur Chiu
