@@ -1,0 +1,85 @@
+-- Treesitter capture groups (@-prefixed). Modern syntax highlighting.
+return function(p)
+  return {
+    ["@comment"]         = { fg = p.comment, italic = true },
+    ["@comment.error"]   = { fg = p.bg, bg = p.error, bold = true },
+    ["@comment.warning"] = { fg = p.bg, bg = p.warn, bold = true },
+    ["@comment.todo"]    = { fg = p.bg, bg = p.info, bold = true },
+    ["@comment.note"]    = { fg = p.bg, bg = p.hint, bold = true },
+
+    ["@keyword"]           = { fg = p.keyword },
+    ["@keyword.function"]  = { fg = p.keyword },
+    ["@keyword.return"]    = { fg = p.keyword, italic = true },
+    ["@keyword.operator"]  = { fg = p.keyword },
+    ["@keyword.conditional"] = { fg = p.keyword },
+    ["@keyword.repeat"]    = { fg = p.keyword },
+    ["@keyword.import"]    = { fg = p.preproc },
+    ["@keyword.export"]    = { fg = p.preproc },
+    ["@keyword.exception"] = { fg = p.keyword },
+    ["@keyword.directive"] = { fg = p.preproc },
+
+    ["@function"]         = { fg = p.func },
+    ["@function.builtin"] = { fg = p.func, italic = true },
+    ["@function.call"]    = { fg = p.func },
+    ["@function.method"]  = { fg = p.func },
+    ["@function.method.call"] = { fg = p.func },
+    ["@constructor"]      = { fg = p.type },
+    ["@method"]           = { fg = p.func },
+
+    ["@variable"]          = { fg = p.variable },
+    ["@variable.builtin"]  = { fg = p.number, italic = true },
+    ["@variable.parameter"] = { fg = p.parameter },
+    ["@variable.member"]   = { fg = p.property },
+    ["@property"]          = { fg = p.property },
+    ["@field"]            = { fg = p.property },
+
+    ["@string"]         = { fg = p.string },
+    ["@string.escape"]  = { fg = p.accent2 },
+    ["@string.regexp"]  = { fg = p.accent2 },
+    ["@string.special"] = { fg = p.accent2 },
+    ["@character"]      = { fg = p.string },
+    ["@character.special"] = { fg = p.accent2 },
+
+    ["@number"]         = { fg = p.number },
+    ["@number.float"]   = { fg = p.number },
+    ["@boolean"]        = { fg = p.number },
+    ["@constant"]       = { fg = p.constant },
+    ["@constant.builtin"] = { fg = p.constant, italic = true },
+    ["@constant.macro"] = { fg = p.preproc },
+
+    ["@type"]         = { fg = p.type },
+    ["@type.builtin"] = { fg = p.type, italic = true },
+    ["@type.definition"] = { fg = p.type },
+    ["@attribute"]    = { fg = p.preproc },
+    ["@namespace"]    = { fg = p.type },
+    ["@module"]       = { fg = p.type },
+    ["@label"]        = { fg = p.keyword },
+
+    ["@operator"]              = { fg = p.operator },
+    ["@punctuation.delimiter"] = { fg = p.operator },
+    ["@punctuation.bracket"]   = { fg = p.operator },
+    ["@punctuation.special"]   = { fg = p.accent2 },
+
+    ["@tag"]           = { fg = p.keyword },
+    ["@tag.builtin"]   = { fg = p.keyword },
+    ["@tag.attribute"] = { fg = p.property },
+    ["@tag.delimiter"] = { fg = p.operator },
+
+    -- markup (markdown, etc.)
+    ["@markup.heading"]      = { fg = p.accent, bold = true },
+    ["@markup.strong"]       = { fg = p.fg, bold = true },
+    ["@markup.italic"]       = { fg = p.fg, italic = true },
+    ["@markup.strikethrough"] = { fg = p.comment, strikethrough = true },
+    ["@markup.underline"]    = { underline = true },
+    ["@markup.raw"]          = { fg = p.string },
+    ["@markup.link"]         = { fg = p.func, underline = true },
+    ["@markup.link.label"]   = { fg = p.accent2 },
+    ["@markup.link.url"]     = { fg = p.func, underline = true },
+    ["@markup.list"]         = { fg = p.accent },
+    ["@markup.quote"]        = { fg = p.comment, italic = true },
+
+    ["@diff.plus"]  = { fg = p.git_add },
+    ["@diff.minus"] = { fg = p.git_delete },
+    ["@diff.delta"] = { fg = p.git_change },
+  }
+end
