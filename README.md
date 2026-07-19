@@ -1,5 +1,7 @@
 # lazypunk
 
+[![CI](https://github.com/achiurizo/lazypunk/actions/workflows/ci.yml/badge.svg)](https://github.com/achiurizo/lazypunk/actions/workflows/ci.yml)
+
 A palette-driven, Cyberpunk: Edgerunners inspired theme for Neovim and tmux.
 Every variant is a single palette table; the Neovim highlight groups and the
 tmux status bar both read only semantic role names, so adding a variant means
@@ -26,6 +28,14 @@ adding a palette - nothing else.
 <br>
 <img alt="lazypunk-rebecca tmux" src="assets/tmux-rebecca.svg" width="512">
 <!-- variants:end -->
+
+## Requirements
+
+- **Neovim** ≥ 0.8 in a truecolor-capable terminal (the colorscheme enables
+  `termguicolors` for you).
+- **tmux theme** (optional): a truecolor terminal plus
+  [tmux-powerline](https://github.com/erikw/tmux-powerline). Neovim is used only
+  to regenerate the themes, not to run them.
 
 ## Neovim
 
