@@ -37,6 +37,23 @@ adding a palette - nothing else.
   [tmux-powerline](https://github.com/erikw/tmux-powerline). Neovim is used only
   to regenerate the themes, not to run them.
 
+## Website
+
+An interactive showcase lives at **https://achiurizo.github.io/lazypunk/** -
+switch variants and watch the whole page recolor from the same palette tables.
+
+The site (`site/`) is a Vite + Svelte app. Palette data is generated from the
+Lua palettes, so it never drifts. Run the generator from the repo root first,
+then start the dev server from `site/`:
+
+```sh
+nvim --headless -l scripts/gen_site.lua site/src/lib/palettes.json   # from the repo root
+cd site && bun install && bun run dev   # local dev server with hot reload
+```
+
+GitHub Actions regenerates the palette JSON, builds with Bun, and deploys to
+Pages on every push to `main` (`.github/workflows/pages.yml`).
+
 ## Neovim
 
 ### lazy.nvim
