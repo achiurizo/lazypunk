@@ -4,9 +4,18 @@
   import Switcher from './components/Switcher.svelte';
   import EditorPreview from './components/EditorPreview.svelte';
   import TmuxBar from './components/TmuxBar.svelte';
+  import Swatches from './components/Swatches.svelte';
+  import Toast from './components/Toast.svelte';
 
   const { order, variants } = data;
   let selected = $state(order[0]);
+  let toast = $state('');
+  let toastTimer;
+  function showToast(msg) {
+    toast = msg;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => (toast = ''), 1500);
+  }
 
   // Apply on mount and whenever `selected` changes.
   $effect(() => {
@@ -35,9 +44,12 @@
     </section>
     <EditorPreview />
     <TmuxBar />
-    <!-- Swatches, Install mount here in later tasks -->
+    <Swatches variant={variants[selected]} oncopy={showToast} />
+    <!-- Install mounts here in a later task -->
   </main>
 </div>
+
+<Toast message={toast} />
 
 <style>
   .terminal {
