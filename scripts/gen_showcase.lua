@@ -1,4 +1,4 @@
--- Generates an SVG "editor pane" showcase for a cyberpunk variant using the
+-- Generates an SVG "editor pane" showcase for a lazypunk variant using the
 -- theme's ACTUAL resolved highlight colors (synID -> synIDtrans -> synIDattr).
 -- Usage: nvim --headless -l gen_showcase.lua <variant> <out.svg>
 local variant = arg[1]
@@ -10,19 +10,19 @@ vim.o.termguicolors = true
 
 -- Sample buffer: rich token variety (comments, keywords, strings, numbers, fns).
 local sample = {
-  '-- lazypunk: palette-driven cyberpunk colorscheme',
+  '-- lazypunk: palette-driven colorscheme',
   'local M = {}',
   '',
   'local palettes = { "lucy", "david", "rebecca" }',
   '',
   'function M.load(name)',
   '  name = name or "lucy"',
-  '  local ok = pcall(require, "cyberpunk")',
+  '  local ok = pcall(require, "lazypunk")',
   '  if not ok then',
-  '    return vim.notify("cyberpunk: unknown variant", 3)',
+  '    return vim.notify("lazypunk: unknown variant", 3)',
   '  end',
   '',
-  '  vim.g.colors_name = "cyberpunk-" .. name',
+  '  vim.g.colors_name = "lazypunk-" .. name',
   '  return true',
   'end',
   '',
@@ -33,7 +33,7 @@ local sample = {
 vim.api.nvim_buf_set_lines(0, 0, -1, false, sample)
 vim.bo.filetype = 'lua'
 vim.cmd('syntax on')
-vim.cmd('colorscheme cyberpunk-' .. variant)
+vim.cmd('colorscheme lazypunk-' .. variant)
 
 local function hl(name)
   return vim.api.nvim_get_hl(0, { name = name, link = false })
@@ -94,7 +94,7 @@ push(string.format('<circle cx="18" cy="%d" r="6" fill="#ff5f57"/>', TITLE_H / 2
 push(string.format('<circle cx="38" cy="%d" r="6" fill="#febc2e"/>', TITLE_H / 2))
 push(string.format('<circle cx="58" cy="%d" r="6" fill="#28c840"/>', TITLE_H / 2))
 -- title text
-push(string.format('<text x="%d" y="%d" fill="%s" opacity="0.85" text-anchor="middle">cyberpunk-%s.lua</text>', W / 2, TITLE_H / 2 + 5, sl_fg, variant))
+push(string.format('<text x="%d" y="%d" fill="%s" opacity="0.85" text-anchor="middle">lazypunk-%s.lua</text>', W / 2, TITLE_H / 2 + 5, sl_fg, variant))
 
 -- body lines
 local y0 = TITLE_H + FS + 4
@@ -131,7 +131,7 @@ local sy = TITLE_H + body_h
 push(string.format('<rect x="0" y="%d" width="%d" height="%d" fill="%s"/>', sy, W, STATUS_H, sl_bg))
 push(string.format('<rect x="0" y="%d" width="70" height="%d" fill="%s"/>', sy, STATUS_H, accent))
 push(string.format('<text x="14" y="%d" fill="%s" font-weight="bold">NORMAL</text>', sy + 16, bg))
-push(string.format('<text x="84" y="%d" fill="%s" opacity="0.9">cyberpunk-%s</text>', sy + 16, sl_fg, variant))
+push(string.format('<text x="84" y="%d" fill="%s" opacity="0.9">lazypunk-%s</text>', sy + 16, sl_fg, variant))
 push(string.format('<text x="%d" y="%d" fill="%s" opacity="0.9" text-anchor="end">lua utf-8  17:1</text>', W - 14, sy + 16, sl_fg))
 
 push('</svg>')

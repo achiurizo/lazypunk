@@ -1,4 +1,4 @@
--- cyberpunk-david — warm gritty night, signature electric yellow + teal.
+-- lazypunk-david — warm gritty night, signature electric yellow + teal.
 -- Derived from the Edgerunners crew key art on David's hot-yellow ground:
 -- near-black warm grounds, yellow keywords (his identity), teal functions,
 -- olive-green strings, coral constants, blood-red errors. Yellow is native

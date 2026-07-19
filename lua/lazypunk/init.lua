@@ -1,6 +1,6 @@
--- cyberpunk.nvim — a palette-driven colorscheme engine
--- Each variant is a palette table under `cyberpunk.palettes.<name>`; the
--- highlight groups in `cyberpunk.theme` are variant-agnostic and read only
+-- lazypunk — a palette-driven colorscheme engine
+-- Each variant is a palette table under `lazypunk.palettes.<name>`; the
+-- highlight groups in `lazypunk.theme` are variant-agnostic and read only
 -- semantic role names, so adding a variant means adding a palette. Nothing else.
 local M = {}
 
@@ -9,9 +9,9 @@ local M = {}
 function M.load(name)
   name = name or "lucy"
 
-  local ok, palette = pcall(require, "cyberpunk.palettes." .. name)
+  local ok, palette = pcall(require, "lazypunk.palettes." .. name)
   if not ok then
-    vim.notify("cyberpunk: unknown variant '" .. name .. "'", vim.log.levels.ERROR)
+    vim.notify("lazypunk: unknown variant '" .. name .. "'", vim.log.levels.ERROR)
     return
   end
 
@@ -24,9 +24,9 @@ function M.load(name)
 
   vim.o.termguicolors = true
   vim.o.background = "dark"
-  vim.g.colors_name = "cyberpunk-" .. name
+  vim.g.colors_name = "lazypunk-" .. name
 
-  local groups = require("cyberpunk.theme").build(palette)
+  local groups = require("lazypunk.theme").build(palette)
   for group, spec in pairs(groups) do
     vim.api.nvim_set_hl(0, group, spec)
   end

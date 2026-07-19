@@ -4,10 +4,10 @@
 local M = {}
 
 local modules = {
-  "cyberpunk.groups.editor",
-  "cyberpunk.groups.syntax",
-  "cyberpunk.groups.treesitter",
-  "cyberpunk.groups.lsp",
+  "lazypunk.groups.editor",
+  "lazypunk.groups.syntax",
+  "lazypunk.groups.treesitter",
+  "lazypunk.groups.lsp",
 }
 
 ---@param palette table

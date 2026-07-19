@@ -6,17 +6,17 @@ names, so adding a variant means adding a palette - nothing else.
 
 ## Variants
 
-### `cyberpunk-lucy` — cool indigo night; neon violet / electric blue / magenta
+### `lazypunk-lucy` — cool indigo night; neon violet / electric blue / magenta
 
-![cyberpunk-lucy](assets/showcase-lucy.svg)
+![lazypunk-lucy](assets/showcase-lucy.svg)
 
-### `cyberpunk-david` — warm gritty night; signature electric yellow + teal
+### `lazypunk-david` — warm gritty night; signature electric yellow + teal
 
-![cyberpunk-david](assets/showcase-david.svg)
+![lazypunk-david](assets/showcase-david.svg)
 
-### `cyberpunk-rebecca` — murky teal-green night; hot pink + mint + amber
+### `lazypunk-rebecca` — murky teal-green night; hot pink + mint + amber
 
-![cyberpunk-rebecca](assets/showcase-rebecca.svg)
+![lazypunk-rebecca](assets/showcase-rebecca.svg)
 
 ## Install
 
@@ -35,31 +35,31 @@ Local development (from a clone):
 Then:
 
 ```lua
-vim.cmd.colorscheme("cyberpunk-lucy")
+vim.cmd.colorscheme("lazypunk-lucy")
 ```
 
 Under LazyVim:
 
 ```lua
-{ "LazyVim/LazyVim", opts = { colorscheme = "cyberpunk-lucy" } }
+{ "LazyVim/LazyVim", opts = { colorscheme = "lazypunk-lucy" } }
 ```
 
 ## Structure
 
 ```
-colors/cyberpunk-{lucy,david,rebecca}.lua   -- :colorscheme entry points
-lua/cyberpunk/init.lua                       -- M.load(name)
-lua/cyberpunk/theme.lua                       -- assembles highlight groups from palette
-lua/cyberpunk/groups/                         -- editor, syntax, treesitter, lsp (pure palette -> hl table)
-lua/cyberpunk/palettes/                       -- one table per variant
+colors/lazypunk-{lucy,david,rebecca}.lua   -- :colorscheme entry points
+lua/lazypunk/init.lua                       -- M.load(name)
+lua/lazypunk/theme.lua                       -- assembles highlight groups from palette
+lua/lazypunk/groups/                         -- editor, syntax, treesitter, lsp (pure palette -> hl table)
+lua/lazypunk/palettes/                       -- one table per variant
 ```
 
 ## Adding a variant
 
-Drop a palette table at `lua/cyberpunk/palettes/<name>.lua` mirroring the keys in
-an existing palette, then add a two-line `colors/cyberpunk-<name>.lua`:
+Drop a palette table at `lua/lazypunk/palettes/<name>.lua` mirroring the keys in
+an existing palette, then add a two-line `colors/lazypunk-<name>.lua`:
 
 ```lua
--- :colorscheme cyberpunk-<name>
-require("cyberpunk").load("<name>")
+-- :colorscheme lazypunk-<name>
+require("lazypunk").load("<name>")
 ```
