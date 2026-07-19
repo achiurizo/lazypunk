@@ -1,5 +1,5 @@
 <script>
-  let { order, variants, selected, onselect } = $props();
+  let { order, selected, onselect } = $props();
 </script>
 
 <nav class="switcher" aria-label="Theme variant">

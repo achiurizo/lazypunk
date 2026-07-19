@@ -33,7 +33,7 @@
   </header>
 
   <div class="switcher-wrap">
-    <Switcher {order} {variants} {selected} onselect={(n) => (selected = n)} />
+    <Switcher {order} {selected} onselect={(n) => (selected = n)} />
   </div>
 
   <main class="body">
@@ -63,7 +63,6 @@
     margin: 32px auto;
     border: 1px solid var(--border);
     border-radius: 12px;
-    overflow: hidden;
     background: var(--bg);
   }
   .titlebar {
@@ -71,6 +70,7 @@
     padding: 9px 14px;
     background: var(--bg_float);
     border-bottom: 1px solid var(--border);
+    border-radius: 12px 12px 0 0;
   }
   .dot { width: 11px; height: 11px; border-radius: 99px; }
   .dot.red { background: var(--error); }
@@ -78,7 +78,7 @@
   .dot.green { background: var(--string); }
   .title { font-size: 12px; color: var(--comment); margin-left: 6px; }
   .switcher-wrap { padding: 12px 16px 0; position: sticky; top: 0; background: var(--bg); z-index: 5; }
-  .body { padding: 20px 22px 40px; }
+  .body { padding: 20px 22px 40px; border-radius: 0 0 12px 12px; }
 
   .hero { padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .hero .boot { color: var(--string); font-size: 13px; }
@@ -108,7 +108,8 @@
 
   @media (max-width: 480px) {
     .terminal { margin: 14px 8px; border-radius: 9px; }
-    .body { padding: 16px 14px 32px; }
+    .titlebar { border-radius: 9px 9px 0 0; }
+    .body { padding: 16px 14px 32px; border-radius: 0 0 9px 9px; }
     .switcher-wrap { padding: 10px 12px 0; }
     .hero h1 { font-size: 30px; }
   }
