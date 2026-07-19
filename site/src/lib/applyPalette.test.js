@@ -31,4 +31,12 @@ describe('applyPalette', () => {
     expect(el.style['--bg']).toBe('#0f0d1e');
     expect(el.style['--ansi-15']).toBe('#fff');
   });
+
+  it('uses setProperty when available (real-DOM path)', () => {
+    const set = {};
+    const el = { style: { setProperty: (k, v) => { set[k] = v; } } };
+    applyPalette(variant, el);
+    expect(set['--bg']).toBe('#0f0d1e');
+    expect(set['--ansi-15']).toBe('#fff');
+  });
 });

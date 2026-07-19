@@ -16,6 +16,10 @@ export function paletteToVars(variant) {
 export function applyPalette(variant, el = document.documentElement) {
   const vars = paletteToVars(variant);
   for (const [name, value] of Object.entries(vars)) {
-    el.style[name] = value;
+    if (el.style.setProperty) {
+      el.style.setProperty(name, value);
+    } else {
+      el.style[name] = value;
+    }
   }
 }
