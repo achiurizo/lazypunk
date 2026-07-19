@@ -31,12 +31,16 @@ local function blurb(v)
   return (d:gsub('%s*%.%s*$', ''))
 end
 
+-- Render both previews at a shared display width so the wide, thin tmux bar
+-- lines up under the Neovim window as a pair instead of stretching full-bleed.
+local IMG_W = 512
 local block = {}
 for _, v in ipairs(ordered) do
   block[#block + 1] = string.format('### `lazypunk-%s` — %s', v, blurb(v))
   block[#block + 1] = ''
-  block[#block + 1] = string.format('![lazypunk-%s neovim](assets/showcase-%s.svg)', v, v)
-  block[#block + 1] = string.format('![lazypunk-%s tmux](assets/tmux-%s.svg)', v, v)
+  block[#block + 1] = string.format('<img alt="lazypunk-%s Neovim" src="assets/showcase-%s.svg" width="%d">', v, v, IMG_W)
+  block[#block + 1] = '<br>'
+  block[#block + 1] = string.format('<img alt="lazypunk-%s tmux" src="assets/tmux-%s.svg" width="%d">', v, v, IMG_W)
   if v ~= ordered[#ordered] then block[#block + 1] = '' end
 end
 
