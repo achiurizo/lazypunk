@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="521" height="410" viewBox="0 0 521 410" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+<rect x="0" y="0" width="521" height="410" rx="10" fill="#0b0c09"/>
+<rect x="0" y="0" width="521" height="34" rx="10" fill="#121410"/>
+<rect x="0" y="22" width="521" height="12" fill="#121410"/>
+<circle cx="18" cy="17" r="6" fill="#ff5f57"/>
+<circle cx="38" cy="17" r="6" fill="#febc2e"/>
+<circle cx="58" cy="17" r="6" fill="#28c840"/>
+<text x="260" y="22" fill="#e6e8e0" opacity="0.85" text-anchor="middle">cyberpunk-david.lua</text>
+<text x="41" y="52.0" fill="#565a45" text-anchor="end" opacity="0.9">1</text>
+<text x="51.2" y="52.0" fill="#6b6f5e" font-style="italic" xml:space="preserve">-- lazypunk: palette-driven cyberpunk colorscheme</text>
+<text x="41" y="72.0" fill="#565a45" text-anchor="end" opacity="0.9">2</text>
+<text x="51.2" y="72.0" fill="#eddd3c" xml:space="preserve">local</text>
+<text x="93.2" y="72.0" fill="#e6e8e0" xml:space="preserve"> M </text>
+<text x="118.4" y="72.0" fill="#8b8e73" xml:space="preserve">=</text>
+<text x="126.8" y="72.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="135.2" y="72.0" fill="#d7c074" xml:space="preserve">{}</text>
+<text x="41" y="92.0" fill="#565a45" text-anchor="end" opacity="0.9">3</text>
+<text x="41" y="112.0" fill="#565a45" text-anchor="end" opacity="0.9">4</text>
+<text x="51.2" y="112.0" fill="#eddd3c" xml:space="preserve">local</text>
+<text x="93.2" y="112.0" fill="#e6e8e0" xml:space="preserve"> palettes </text>
+<text x="177.2" y="112.0" fill="#8b8e73" xml:space="preserve">=</text>
+<text x="185.6" y="112.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="194.0" y="112.0" fill="#d7c074" xml:space="preserve">{</text>
+<text x="202.4" y="112.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="210.8" y="112.0" fill="#93c46f" xml:space="preserve">"lucy"</text>
+<text x="261.2" y="112.0" fill="#e6e8e0" xml:space="preserve">, </text>
+<text x="278.0" y="112.0" fill="#93c46f" xml:space="preserve">"david"</text>
+<text x="336.8" y="112.0" fill="#e6e8e0" xml:space="preserve">, </text>
+<text x="353.6" y="112.0" fill="#93c46f" xml:space="preserve">"rebecca"</text>
+<text x="429.2" y="112.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="437.6" y="112.0" fill="#d7c074" xml:space="preserve">}</text>
+<text x="41" y="132.0" fill="#565a45" text-anchor="end" opacity="0.9">5</text>
+<text x="41" y="152.0" fill="#565a45" text-anchor="end" opacity="0.9">6</text>
+<text x="51.2" y="152.0" fill="#5fc9c2" xml:space="preserve">function</text>
+<text x="118.4" y="152.0" fill="#e6e8e0" xml:space="preserve"> M.load(name)</text>
+<text x="41" y="172.0" fill="#565a45" text-anchor="end" opacity="0.9">7</text>
+<text x="51.2" y="172.0" fill="#e6e8e0" xml:space="preserve">  name </text>
+<text x="110.0" y="172.0" fill="#8b8e73" xml:space="preserve">=</text>
+<text x="118.4" y="172.0" fill="#e6e8e0" xml:space="preserve"> name </text>
+<text x="168.8" y="172.0" fill="#8b8e73" xml:space="preserve">or</text>
+<text x="185.6" y="172.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="194.0" y="172.0" fill="#93c46f" xml:space="preserve">"lucy"</text>
+<text x="41" y="192.0" fill="#565a45" text-anchor="end" opacity="0.9">8</text>
+<text x="51.2" y="192.0" fill="#e6e8e0" xml:space="preserve">  </text>
+<text x="68.0" y="192.0" fill="#eddd3c" xml:space="preserve">local</text>
+<text x="110.0" y="192.0" fill="#e6e8e0" xml:space="preserve"> ok </text>
+<text x="143.6" y="192.0" fill="#8b8e73" xml:space="preserve">=</text>
+<text x="152.0" y="192.0" fill="#e6e8e0" xml:space="preserve"> pcall(require, </text>
+<text x="286.4" y="192.0" fill="#93c46f" xml:space="preserve">"cyberpunk"</text>
+<text x="378.8" y="192.0" fill="#e6e8e0" xml:space="preserve">)</text>
+<text x="41" y="212.0" fill="#565a45" text-anchor="end" opacity="0.9">9</text>
+<text x="51.2" y="212.0" fill="#e6e8e0" xml:space="preserve">  </text>
+<text x="68.0" y="212.0" fill="#eddd3c" xml:space="preserve">if</text>
+<text x="84.8" y="212.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="93.2" y="212.0" fill="#8b8e73" xml:space="preserve">not</text>
+<text x="118.4" y="212.0" fill="#e6e8e0" xml:space="preserve"> ok </text>
+<text x="152.0" y="212.0" fill="#eddd3c" xml:space="preserve">then</text>
+<text x="41" y="232.0" fill="#565a45" text-anchor="end" opacity="0.9">10</text>
+<text x="51.2" y="232.0" fill="#e6e8e0" xml:space="preserve">    </text>
+<text x="84.8" y="232.0" fill="#eddd3c" xml:space="preserve">return</text>
+<text x="135.2" y="232.0" fill="#e6e8e0" xml:space="preserve"> vim.notify(</text>
+<text x="236.0" y="232.0" fill="#93c46f" xml:space="preserve">"cyberpunk: unknown variant"</text>
+<text x="471.2" y="232.0" fill="#e6e8e0" xml:space="preserve">, </text>
+<text x="488.0" y="232.0" fill="#ff8663" xml:space="preserve">3</text>
+<text x="496.4" y="232.0" fill="#e6e8e0" xml:space="preserve">)</text>
+<text x="41" y="252.0" fill="#565a45" text-anchor="end" opacity="0.9">11</text>
+<text x="51.2" y="252.0" fill="#e6e8e0" xml:space="preserve">  </text>
+<text x="68.0" y="252.0" fill="#eddd3c" xml:space="preserve">end</text>
+<text x="41" y="272.0" fill="#565a45" text-anchor="end" opacity="0.9">12</text>
+<text x="41" y="292.0" fill="#565a45" text-anchor="end" opacity="0.9">13</text>
+<text x="51.2" y="292.0" fill="#e6e8e0" xml:space="preserve">  vim.g.colors_name </text>
+<text x="219.2" y="292.0" fill="#8b8e73" xml:space="preserve">=</text>
+<text x="227.6" y="292.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="236.0" y="292.0" fill="#93c46f" xml:space="preserve">"cyberpunk-"</text>
+<text x="336.8" y="292.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="345.2" y="292.0" fill="#8b8e73" xml:space="preserve">..</text>
+<text x="362.0" y="292.0" fill="#e6e8e0" xml:space="preserve"> name</text>
+<text x="41" y="312.0" fill="#565a45" text-anchor="end" opacity="0.9">14</text>
+<text x="51.2" y="312.0" fill="#e6e8e0" xml:space="preserve">  </text>
+<text x="68.0" y="312.0" fill="#eddd3c" xml:space="preserve">return</text>
+<text x="118.4" y="312.0" fill="#e6e8e0" xml:space="preserve"> </text>
+<text x="126.8" y="312.0" fill="#ff8663" xml:space="preserve">true</text>
+<text x="41" y="332.0" fill="#565a45" text-anchor="end" opacity="0.9">15</text>
+<text x="51.2" y="332.0" fill="#5fc9c2" xml:space="preserve">end</text>
+<text x="41" y="352.0" fill="#565a45" text-anchor="end" opacity="0.9">16</text>
+<text x="41" y="372.0" fill="#565a45" text-anchor="end" opacity="0.9">17</text>
+<text x="51.2" y="372.0" fill="#eddd3c" xml:space="preserve">return</text>
+<text x="101.6" y="372.0" fill="#e6e8e0" xml:space="preserve"> M</text>
+<rect x="0" y="386" width="521" height="24" fill="#121410"/>
+<rect x="0" y="386" width="70" height="24" fill="#5fc9c2"/>
+<text x="14" y="402" fill="#0b0c09" font-weight="bold">NORMAL</text>
+<text x="84" y="402" fill="#e6e8e0" opacity="0.9">cyberpunk-david</text>
+<text x="507" y="402" fill="#e6e8e0" opacity="0.9" text-anchor="end">lua utf-8  17:1</text>
+</svg>

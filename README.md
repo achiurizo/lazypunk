@@ -6,11 +6,17 @@ names, so adding a variant means adding a palette - nothing else.
 
 ## Variants
 
-| Colorscheme          | Mood                                                      |
-| -------------------- | -------------------------------------------------------- |
-| `cyberpunk-lucy`     | Cool indigo night; neon violet / electric blue / magenta |
-| `cyberpunk-david`    | Warm gritty night; signature electric yellow + teal      |
-| `cyberpunk-rebecca`  | Murky teal-green night; hot pink + mint + amber          |
+### `cyberpunk-lucy` — cool indigo night; neon violet / electric blue / magenta
+
+![cyberpunk-lucy](assets/showcase-lucy.svg)
+
+### `cyberpunk-david` — warm gritty night; signature electric yellow + teal
+
+![cyberpunk-david](assets/showcase-david.svg)
+
+### `cyberpunk-rebecca` — murky teal-green night; hot pink + mint + amber
+
+![cyberpunk-rebecca](assets/showcase-rebecca.svg)
 
 ## Install
 
