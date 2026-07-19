@@ -3,6 +3,7 @@
   import { applyPalette } from './lib/applyPalette.js';
   import Switcher from './components/Switcher.svelte';
   import EditorPreview from './components/EditorPreview.svelte';
+  import TmuxBar from './components/TmuxBar.svelte';
 
   const { order, variants } = data;
   let selected = $state(order[0]);
@@ -33,7 +34,8 @@
       <p class="blurb">{variants[selected].blurb}</p>
     </section>
     <EditorPreview />
-    <!-- TmuxBar, Swatches, Install mount here in later tasks -->
+    <TmuxBar />
+    <!-- Swatches, Install mount here in later tasks -->
   </main>
 </div>
 
