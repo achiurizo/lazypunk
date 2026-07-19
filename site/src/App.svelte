@@ -2,6 +2,7 @@
   import data from './lib/palettes.json';
   import { applyPalette } from './lib/applyPalette.js';
   import Switcher from './components/Switcher.svelte';
+  import EditorPreview from './components/EditorPreview.svelte';
 
   const { order, variants } = data;
   let selected = $state(order[0]);
@@ -31,7 +32,8 @@
       <p class="pitch">A palette-driven, Edgerunners-inspired theme for Neovim &amp; tmux.</p>
       <p class="blurb">{variants[selected].blurb}</p>
     </section>
-    <!-- EditorPreview, TmuxBar, Swatches, Install mount here in later tasks -->
+    <EditorPreview />
+    <!-- TmuxBar, Swatches, Install mount here in later tasks -->
   </main>
 </div>
 
