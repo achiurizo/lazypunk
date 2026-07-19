@@ -38,7 +38,7 @@
 
   <main class="body">
     <section class="hero">
-      <p class="boot">&gt; loading lazypunk-{selected}…</p>
+      <p class="boot">&gt; loading lazypunk-{selected}…<span class="cursor" aria-hidden="true">▋</span></p>
       <h1>lazypunk</h1>
       <p class="pitch">A palette-driven, Edgerunners-inspired theme for Neovim &amp; tmux.</p>
       <p class="blurb">{variants[selected].blurb}</p>
@@ -79,10 +79,37 @@
   .title { font-size: 12px; color: var(--comment); margin-left: 6px; }
   .switcher-wrap { padding: 12px 16px 0; position: sticky; top: 0; background: var(--bg); z-index: 5; }
   .body { padding: 20px 22px 40px; }
+
+  .hero { padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .hero .boot { color: var(--string); font-size: 13px; }
+  .hero .boot .cursor {
+    display: inline-block;
+    margin-left: 1px;
+    color: var(--string);
+    animation: blink 1s steps(1, jump-none) infinite;
+  }
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero .boot .cursor { animation: none; opacity: 1; }
+  }
   .hero h1 { font-size: 40px; letter-spacing: -0.01em; color: var(--accent); margin: 6px 0; }
   .hero .pitch { color: var(--fg); }
   .hero .blurb { color: var(--fg_dim); font-size: 14px; margin-top: 4px; }
-  .foot { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--comment); font-size: 13px; }
-  .foot a { color: var(--accent2); }
+
+  .foot {
+    margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border);
+    color: var(--comment); font-size: 13px; line-height: 1.8;
+  }
+  .foot a { color: var(--accent2); border-radius: 4px; }
+  .foot a:hover { color: var(--accent); text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .terminal { margin: 14px 8px; border-radius: 9px; }
+    .body { padding: 16px 14px 32px; }
+    .switcher-wrap { padding: 10px 12px 0; }
+    .hero h1 { font-size: 30px; }
+  }
 </style>

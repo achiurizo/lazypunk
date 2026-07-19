@@ -40,7 +40,10 @@
 </section>
 
 <style>
-  .swatches { margin-top: 30px; }
+  .swatches {
+    margin-top: 28px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
   .swatches h2 { font-size: 16px; color: var(--fg); margin-bottom: 10px; }
   .swatches h3 { font-size: 13px; color: var(--fg_dim); margin: 16px 0 8px; }
   .group { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
@@ -48,11 +51,26 @@
     display: flex; align-items: center; gap: 8px;
     background: var(--bg_float); border: 1px solid var(--border);
     border-radius: 8px; padding: 5px 9px; cursor: pointer; font: inherit;
+    transition: border-color 0.12s ease, transform 0.12s ease;
+  }
+  .chip:hover { border-color: var(--accent2); }
+  .chip:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 2px;
   }
   .sw { width: 18px; height: 18px; border-radius: 5px; border: 1px solid rgba(255,255,255,.08); }
   .meta { display: flex; flex-direction: column; line-height: 1.2; text-align: left; }
   .rn { font-size: 11px; color: var(--fg); }
   .hx { font-size: 10px; color: var(--comment); }
   .ansi { display: flex; flex-wrap: wrap; gap: 5px; }
-  .ansi-sw { width: 26px; height: 26px; border-radius: 5px; border: 1px solid rgba(255,255,255,.08); cursor: pointer; }
+  .ansi-sw {
+    width: 26px; height: 26px; border-radius: 5px;
+    border: 1px solid rgba(255,255,255,.08); cursor: pointer;
+    transition: border-color 0.12s ease, transform 0.12s ease;
+  }
+  .ansi-sw:hover { border-color: var(--accent2); transform: translateY(-1px); }
+  .ansi-sw:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 2px;
+  }
 </style>

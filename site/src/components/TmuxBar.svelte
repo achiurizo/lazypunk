@@ -12,8 +12,9 @@
 <style>
   .tmux {
     display: flex; align-items: stretch;
-    margin-top: 22px;
-    border-radius: 6px; overflow: hidden;
+    margin-top: 28px;
+    border-radius: 6px;
+    overflow-x: auto; overflow-y: hidden;
     font-size: 12px; font-weight: 600;
     border: 1px solid var(--border);
   }

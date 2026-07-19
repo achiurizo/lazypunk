@@ -29,14 +29,15 @@
 
 <style>
   .editor {
-    margin-top: 22px;
+    margin-top: 28px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     background: var(--bg);
     font-size: 13px;
   }
-  .row { display: flex; }
+  .row { display: flex; width: max-content; min-width: 100%; }
   .ln {
     width: 34px; text-align: right; padding-right: 12px;
     color: var(--gutter); background: var(--bg_dark); user-select: none;

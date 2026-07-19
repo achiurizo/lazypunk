@@ -27,6 +27,15 @@
     background: var(--bg_float);
     color: var(--fg_dim);
     cursor: pointer;
+    transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  }
+  .tab:hover {
+    color: var(--fg);
+    border-color: var(--accent2);
+  }
+  .tab:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 2px;
   }
   .tab.active {
     background: var(--accent);
