@@ -1,0 +1,51 @@
+name: Generate assets
+
+# Manual-only. Dispatch against any branch; regenerates the palette-derived
+# resources (tmux-powerline themes + Neovim/tmux showcase SVGs shown in the
+# README) and commits them back to that same branch.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-assets-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+
+      - name: Regenerate themes and showcases
+        run: |
+          set -euo pipefail
+          for f in lua/lazypunk/palettes/*.lua; do
+            v="$(basename "$f" .lua)"
+            echo "== $v =="
+            nvim --headless -l scripts/gen_tmux.lua "$v" "tmux-powerline/themes/lazypunk-$v.sh"
+            nvim --headless -l scripts/gen_showcase.lua "$v" "assets/showcase-$v.svg"
+            nvim --headless -l scripts/gen_tmux_showcase.lua "$v" "assets/tmux-$v.svg"
+          done
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets tmux-powerline/themes README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(assets): regenerate lazypunk themes and showcases"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
