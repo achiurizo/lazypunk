@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="825" height="40" viewBox="0 0 825 40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+<rect x="0" y="0" width="825" height="40" rx="6" fill="#0a0814"/>
+<rect x="0.0" y="0" width="95.2" height="40" fill="#5b8cff"/>
+<rect x="95.2" y="0" width="112.0" height="40" fill="#5b8cff"/>
+<rect x="207.2" y="0" width="70.0" height="40" fill="#9d7cff"/>
+<rect x="297.2" y="0" width="64.4" height="40" fill="#c264e0"/>
+<rect x="367.6" y="0" width="64.4" height="40" fill="#14122a"/>
+<rect x="438.0" y="0" width="64.4" height="40" fill="#14122a"/>
+<rect x="755.0" y="0" width="70.0" height="40" fill="#3a3560"/>
+<rect x="676.6" y="0" width="78.4" height="40" fill="#3a3560"/>
+<rect x="623.4" y="0" width="53.2" height="40" fill="#ffc14d"/>
+<rect x="561.8" y="0" width="61.6" height="40" fill="#14122a"/>
+<polygon points="95.2,0 107.2,20 95.2,40" fill="#5b8cff"/>
+<polygon points="207.2,0 219.2,20 207.2,40" fill="#5b8cff"/>
+<polygon points="277.2,0 289.2,20 277.2,40" fill="#9d7cff"/>
+<polygon points="755.0,0 743.0,20 755.0,40" fill="#3a3560"/>
+<polygon points="676.6,0 664.6,20 676.6,40" fill="#3a3560"/>
+<polygon points="623.4,0 611.4,20 623.4,40" fill="#ffc14d"/>
+<polygon points="561.8,0 549.8,20 561.8,40" fill="#14122a"/>
+<text x="10.0" y="25.2" fill="#0a0814" font-weight="bold" xml:space="preserve">lazypunk</text>
+<text x="105.2" y="25.2" fill="#0a0814" xml:space="preserve">edgerunner</text>
+<text x="217.2" y="25.2" fill="#0a0814" xml:space="preserve"> main</text>
+<text x="304.2" y="25.2" fill="#0a0814" font-weight="bold" xml:space="preserve">1 nvim</text>
+<text x="374.6" y="25.2" fill="#6f6a9c" xml:space="preserve">2 fish</text>
+<text x="445.0" y="25.2" fill="#6f6a9c" xml:space="preserve">3 logs</text>
+<text x="773.0" y="25.2" fill="#e7dcf0" xml:space="preserve">21:00</text>
+<text x="694.6" y="25.2" fill="#e7dcf0" xml:space="preserve">Sat 12</text>
+<text x="641.4" y="25.2" fill="#0a0814" xml:space="preserve">87%</text>
+<text x="579.8" y="25.2" fill="#c264e0" xml:space="preserve">0.42</text>
+</svg>
