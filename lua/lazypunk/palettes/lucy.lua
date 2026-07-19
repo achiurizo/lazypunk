@@ -1,4 +1,4 @@
--- lazypunk-lucy — cool indigo night, neon violet/blue/magenta.
+-- lazypunk-lucy — cool indigo night; neon violet / electric blue / magenta.
 -- Derived from the Edgerunners "Lucy" key art: deep indigo-black grounds,
 -- electric-blue functions, mint strings, magenta constants, hot-rose errors.
 -- One synthetic accent: amber `warn`, absent from the art, added so warnings

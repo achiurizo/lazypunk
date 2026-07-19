@@ -1,4 +1,4 @@
--- lazypunk-rebecca — murky teal-green night, hot pink + mint + amber.
+-- lazypunk-rebecca — murky teal-green night; hot pink + mint + amber.
 -- Derived from the Edgerunners "Rebecca" key art: dark green-black grounds,
 -- hot-pink keywords (her chaotic energy), teal functions, mint-green strings,
 -- amber constants (her iconic glowing eyes), rose-red errors. Amber is native
