@@ -45,14 +45,14 @@
   /* These classes are only ever injected via {@html} into .src, so Svelte's
      scoped-CSS compiler can't see them in the static template and would tree-
      shake them as "unused" without :global(). */
-  :global(.src .kw) { color: var(--keyword); }
-  :global(.src .fn) { color: var(--func); }
-  :global(.src .st) { color: var(--string); }
-  :global(.src .nm) { color: var(--number); }
-  :global(.src .ty) { color: var(--type); }
-  :global(.src .cm) { color: var(--comment); }
-  :global(.src .va) { color: var(--variable); }
-  :global(.src .pa) { color: var(--parameter); }
+  .src :global(.kw) { color: var(--keyword); }
+  .src :global(.fn) { color: var(--func); }
+  .src :global(.st) { color: var(--string); }
+  .src :global(.nm) { color: var(--number); }
+  .src :global(.ty) { color: var(--type); }
+  .src :global(.cm) { color: var(--comment); }
+  .src :global(.va) { color: var(--variable); }
+  .src :global(.pa) { color: var(--parameter); }
   .diag .src { color: var(--comment); }
   .err-underline { text-decoration: wavy underline var(--error); }
   .diag-msg { color: var(--error); font-size: 12px; margin-left: 10px; }
