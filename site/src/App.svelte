@@ -5,6 +5,7 @@
   import EditorPreview from './components/EditorPreview.svelte';
   import TmuxBar from './components/TmuxBar.svelte';
   import Swatches from './components/Swatches.svelte';
+  import Install from './components/Install.svelte';
   import Toast from './components/Toast.svelte';
 
   const { order, variants } = data;
@@ -45,7 +46,12 @@
     <EditorPreview />
     <TmuxBar />
     <Swatches variant={variants[selected]} oncopy={showToast} />
-    <!-- Install mounts here in a later task -->
+    <Install {selected} oncopy={showToast} />
+    <footer class="foot">
+      <a href="https://github.com/achiurizo/lazypunk">GitHub</a>
+      · <a href="https://github.com/achiurizo/lazypunk#adding-a-variant">Add a variant</a>
+      · MIT © Arthur Chiu
+    </footer>
   </main>
 </div>
 
@@ -77,4 +83,6 @@
   .hero h1 { font-size: 40px; letter-spacing: -0.01em; color: var(--accent); margin: 6px 0; }
   .hero .pitch { color: var(--fg); }
   .hero .blurb { color: var(--fg_dim); font-size: 14px; margin-top: 4px; }
+  .foot { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--comment); font-size: 13px; }
+  .foot a { color: var(--accent2); }
 </style>
