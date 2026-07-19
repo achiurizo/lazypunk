@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Colorschemes load + artifacts in sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+
+      - name: Load every colorscheme
+        run: nvim --headless -l scripts/check_load.lua
+
+      - name: Regenerate all artifacts
+        run: |
+          set -euo pipefail
+          for f in lua/lazypunk/palettes/*.lua; do
+            v="$(basename "$f" .lua)"
+            nvim --headless -l scripts/gen_tmux.lua "$v" "tmux-powerline/themes/lazypunk-$v.sh"
+            nvim --headless -l scripts/gen_showcase.lua "$v" "assets/showcase-$v.svg"
+            nvim --headless -l scripts/gen_tmux_showcase.lua "$v" "assets/tmux-$v.svg"
+          done
+          nvim --headless -l scripts/gen_readme.lua README.md
+
+      - name: Fail if artifacts are out of date
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Generated artifacts are stale. Regenerate them (see the README's 'Adding a variant' section) and commit the result."
+            git --no-pager diff
+            git status --porcelain
+            exit 1
+          fi
+          echo "Generated artifacts are in sync."
+
+  shell-lint:
+    name: Shell lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: shellcheck generated tmux themes
+        run: shellcheck tmux-powerline/themes/*.sh
+
+  lua-lint:
+    name: Lua lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leafo/gh-actions-lua@v13
+        with:
+          luaVersion: "5.1"
+      - uses: leafo/gh-actions-luarocks@v6
+      - name: Install luacheck
+        run: luarocks install luacheck
+      - name: luacheck
+        run: luacheck lua scripts colors

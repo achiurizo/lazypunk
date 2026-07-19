@@ -44,7 +44,6 @@ local normal = hl('Normal')
 local bg = hex(normal.bg) or '#101010'
 local fg = hex(normal.fg) or '#e0e0e0'
 local linenr = hex(hl('LineNr').fg) or fg
-local curnr = hex((hl('CursorLineNr').fg)) or fg
 local statusline = hl('StatusLine')
 local sl_bg = hex(statusline.bg) or bg
 local sl_fg = hex(statusline.fg) or fg
