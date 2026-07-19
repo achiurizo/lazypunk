@@ -95,9 +95,6 @@ nvim --headless -l scripts/gen_tmux_showcase.lua <variant> assets/tmux-<variant>
 nvim --headless -l scripts/gen_readme.lua README.md
 ```
 
-Or just run the **Generate assets** GitHub Action (manual dispatch) on your
-branch — it regenerates everything and commits the result back.
-
 ## Adding a variant
 
 Drop a palette table at `lua/lazypunk/palettes/<name>.lua` mirroring the keys in
@@ -109,5 +106,5 @@ becomes the README entry), then add a two-line `colors/lazypunk-<name>.lua`:
 require("lazypunk").load("<name>")
 ```
 
-Regenerate (or dispatch the workflow) and the theme, both showcases, and the
-README Variants entry all appear.
+Regenerate and the theme, both showcases, and the README Variants entry all
+appear.
