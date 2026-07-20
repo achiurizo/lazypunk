@@ -142,3 +142,8 @@ Pages on every push to `main` (`.github/workflows/pages.yml`).
 ## License
 
 [MIT](LICENSE) © Arthur Chiu
+
+lazypunk is an independent, fan-made project and is not affiliated with,
+endorsed by, or sponsored by Netflix, CD Projekt, or Studio Trigger.
+"Cyberpunk: Edgerunners" and its characters are trademarks of their respective
+owners; the theme only draws visual inspiration from the show.
