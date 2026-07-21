@@ -33,6 +33,7 @@ jobs:
             v="$(basename "$f" .lua)"
             echo "== $v =="
             nvim --headless -l scripts/gen_tmux.lua "$v" "tmux-powerline/themes/lazypunk-$v.sh"
+            nvim --headless -l scripts/gen_tmux_conf.lua "$v" "tmux/lazypunk-$v.conf"
             nvim --headless -l scripts/gen_showcase.lua "$v" "assets/showcase-$v.svg"
             nvim --headless -l scripts/gen_tmux_showcase.lua "$v" "assets/tmux-$v.svg"
           done
@@ -43,7 +44,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets tmux-powerline/themes README.md
+          git add assets tmux-powerline/themes tmux README.md
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

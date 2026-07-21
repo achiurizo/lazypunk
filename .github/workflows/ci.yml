@@ -30,6 +30,7 @@ jobs:
           for f in lua/lazypunk/palettes/*.lua; do
             v="$(basename "$f" .lua)"
             nvim --headless -l scripts/gen_tmux.lua "$v" "tmux-powerline/themes/lazypunk-$v.sh"
+            nvim --headless -l scripts/gen_tmux_conf.lua "$v" "tmux/lazypunk-$v.conf"
             nvim --headless -l scripts/gen_showcase.lua "$v" "assets/showcase-$v.svg"
             nvim --headless -l scripts/gen_tmux_showcase.lua "$v" "assets/tmux-$v.svg"
           done
@@ -52,6 +53,25 @@ jobs:
       - uses: actions/checkout@v5
       - name: shellcheck generated tmux themes
         run: shellcheck tmux-powerline/themes/*.sh
+      - name: shellcheck TPM entry point
+        run: shellcheck lazypunk.tmux
+
+  tmux-validate:
+    name: Native tmux configs parse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install tmux
+        run: sudo apt-get update && sudo apt-get install -y tmux
+      - name: Parse every native theme
+        run: |
+          set -euo pipefail
+          for f in tmux/*.conf; do
+            s="lp-$(basename "$f" .conf)"
+            tmux -L "$s" -f "$f" new-session -d
+            tmux -L "$s" kill-server
+            echo "ok: $f"
+          done
 
   lua-lint:
     name: Lua lint

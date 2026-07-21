@@ -22,6 +22,7 @@ images, and the README all read from it. Adding a variant means adding a palette
 
    ```sh
    nvim --headless -l scripts/gen_tmux.lua <name> tmux-powerline/themes/lazypunk-<name>.sh
+   nvim --headless -l scripts/gen_tmux_conf.lua <name> tmux/lazypunk-<name>.conf
    nvim --headless -l scripts/gen_showcase.lua <name> assets/showcase-<name>.svg
    nvim --headless -l scripts/gen_tmux_showcase.lua <name> assets/tmux-<name>.svg
    nvim --headless -l scripts/gen_readme.lua README.md

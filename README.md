@@ -65,22 +65,44 @@ Under LazyVim:
 
 ## tmux
 
-Ships as [tmux-powerline](https://github.com/erikw/tmux-powerline) themes
-(`tmux-powerline/themes/lazypunk-<variant>.sh`). Truecolor terminal required
-(`set -g default-terminal "tmux-256color"` + an `RGB`/`Tc` override); the themes
-use the palette hex directly.
+A truecolor terminal is required either way (`set -g default-terminal
+"tmux-256color"` + an `RGB`/`Tc` override); the themes use the palette hex
+directly.
 
-Point tmux-powerline at the themes and select a variant in your
-`tmux-powerline/config.sh`:
+### Native (no dependencies)
+
+Recommended. Sets the status bar, window, pane, message, mode, and clock colors
+plus a minimal, overridable status line - no plugins or patched fonts needed.
+
+Via [TPM](https://github.com/tmux-plugins/tpm):
+
+```tmux
+set -g @plugin 'achiurizo/lazypunk'
+set -g @lazypunk_variant 'lucy'   # optional: lucy (default), david, rebecca
+```
+
+Or source a variant directly (no TPM):
+
+```tmux
+source-file /path/to/lazypunk/tmux/lazypunk-lucy.conf
+```
+
+The status line is set with plain `set -g` options, so anything you define
+after sourcing (your own `status-left`/`status-right`) wins.
+
+### tmux-powerline (optional)
+
+Also ships as [tmux-powerline](https://github.com/erikw/tmux-powerline) themes
+(`tmux-powerline/themes/lazypunk-<variant>.sh`) with the standard powerline
+segment layout (session, host, VCS branch left; load, battery, date/time
+right). Point tmux-powerline at the themes in your `tmux-powerline/config.sh`:
 
 ```sh
 export TMUX_POWERLINE_THEME="lazypunk-lucy"
 export TMUX_POWERLINE_DIR_USER_THEMES="/path/to/lazypunk/tmux-powerline/themes"
 ```
 
-The theme keeps the standard powerline segment layout (session, host, VCS
-branch on the left; load, battery, date/time on the right) and recolors it per
-variant. A Nerd/Powerline-patched font gives the arrow separators.
+A Nerd/Powerline-patched font gives the arrow separators.
 
 ## Structure
 
@@ -90,7 +112,10 @@ lua/lazypunk/init.lua                       -- M.load(name)
 lua/lazypunk/theme.lua                       -- assembles highlight groups from palette
 lua/lazypunk/groups/                         -- editor, syntax, treesitter, lsp (pure palette -> hl table)
 lua/lazypunk/palettes/                       -- one table per variant (the single source of truth)
+tmux/lazypunk-*.conf                          -- generated native tmux themes
+lazypunk.tmux                                 -- TPM entry point (sources tmux/ by @lazypunk_variant)
 tmux-powerline/themes/lazypunk-*.sh          -- generated tmux-powerline themes
+scripts/gen_tmux_conf.lua                     -- palette -> native tmux theme
 scripts/gen_tmux.lua                          -- palette -> tmux-powerline theme
 scripts/gen_showcase.lua                      -- palette -> Neovim editor SVG (README)
 scripts/gen_tmux_showcase.lua                 -- palette -> tmux status-bar SVG (README)
@@ -103,6 +128,7 @@ everything:
 
 ```sh
 nvim --headless -l scripts/gen_tmux.lua <variant> tmux-powerline/themes/lazypunk-<variant>.sh
+nvim --headless -l scripts/gen_tmux_conf.lua <variant> tmux/lazypunk-<variant>.conf
 nvim --headless -l scripts/gen_showcase.lua <variant> assets/showcase-<variant>.svg
 nvim --headless -l scripts/gen_tmux_showcase.lua <variant> assets/tmux-<variant>.svg
 nvim --headless -l scripts/gen_readme.lua README.md
