@@ -1,7 +1,7 @@
 <section class="tmux" aria-label="tmux status bar preview">
   <span class="seg session">  main </span>
   <span class="seg host"> host </span>
-  <span class="seg branch">  achiurizo-gh-pages </span>
+  <span class="seg branch">  develop </span>
   <span class="spacer"></span>
   <span class="seg load"> 0.42 </span>
   <span class="seg battery"> 87% </span>
