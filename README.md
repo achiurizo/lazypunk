@@ -90,6 +90,27 @@ source-file /path/to/lazypunk/tmux/lazypunk-lucy.conf
 The status line is set with plain `set -g` options, so anything you define
 after sourcing (your own `status-left`/`status-right`) wins.
 
+**Accents only (keep your own status bar).** Set `@lazypunk_status off` before
+sourcing to apply just the colors (pane borders, message, copy-mode, clock) and
+leave the status bar to another plugin (e.g. tmux-powerline):
+
+```tmux
+set -g @lazypunk_status off
+source-file /path/to/lazypunk/tmux/lazypunk-lucy.conf
+```
+
+**Exported palette.** Each theme also publishes its palette as read-only user
+options, so your own config (or scripts) can reuse the exact colors without
+hardcoding them - same role names as the Neovim theme:
+
+```tmux
+# tmux show-option -gqv @lazypunk_accent   ->  #c264e0
+@lazypunk_variant  @lazypunk_bg      @lazypunk_bg_dark  @lazypunk_border
+@lazypunk_fg       @lazypunk_fg_dim  @lazypunk_comment  @lazypunk_string
+@lazypunk_keyword  @lazypunk_number  @lazypunk_accent   @lazypunk_accent2
+@lazypunk_warn     @lazypunk_error
+```
+
 ### tmux-powerline (optional)
 
 Also ships as [tmux-powerline](https://github.com/erikw/tmux-powerline) themes
