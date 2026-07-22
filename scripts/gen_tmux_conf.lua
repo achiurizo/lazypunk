@@ -17,6 +17,7 @@ local sub = {
   -- exported palette roles (read back via `tmux show-option -gqv @lazypunk_<role>`)
   p_bg          = p.bg,
   p_bg_dark     = p.bg_dark,
+  p_bg_float    = p.bg_float,
   p_border      = p.border,
   p_fg          = p.fg,
   p_fg_dim      = p.fg_dim,
@@ -61,9 +62,10 @@ local template = [[
 
 # --- palette (machine-readable; read with: tmux show-option -gqv @lazypunk_accent)
 set -g @lazypunk_variant "{{variant}}"
-set -g @lazypunk_bg      "{{p_bg}}"
-set -g @lazypunk_bg_dark "{{p_bg_dark}}"
-set -g @lazypunk_border  "{{p_border}}"
+set -g @lazypunk_bg       "{{p_bg}}"
+set -g @lazypunk_bg_dark  "{{p_bg_dark}}"
+set -g @lazypunk_bg_float "{{p_bg_float}}"
+set -g @lazypunk_border   "{{p_border}}"
 set -g @lazypunk_fg      "{{p_fg}}"
 set -g @lazypunk_fg_dim  "{{p_fg_dim}}"
 set -g @lazypunk_comment "{{p_comment}}"

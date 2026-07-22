@@ -105,10 +105,10 @@ hardcoding them - same role names as the Neovim theme:
 
 ```tmux
 # tmux show-option -gqv @lazypunk_accent   ->  #c264e0
-@lazypunk_variant  @lazypunk_bg      @lazypunk_bg_dark  @lazypunk_border
-@lazypunk_fg       @lazypunk_fg_dim  @lazypunk_comment  @lazypunk_string
-@lazypunk_keyword  @lazypunk_number  @lazypunk_accent   @lazypunk_accent2
-@lazypunk_warn     @lazypunk_error
+@lazypunk_variant  @lazypunk_bg       @lazypunk_bg_dark  @lazypunk_bg_float
+@lazypunk_border   @lazypunk_fg       @lazypunk_fg_dim   @lazypunk_comment
+@lazypunk_string   @lazypunk_keyword  @lazypunk_number   @lazypunk_accent
+@lazypunk_accent2  @lazypunk_warn     @lazypunk_error
 ```
 
 ### tmux-powerline (optional)
