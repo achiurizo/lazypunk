@@ -68,9 +68,6 @@ fi
 # shellcheck disable=SC1143,SC2128
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-		"focus_mode #ff6e9c #070d0a"
-		"claude_agents #57c4bb #070d0a"
-		"claude_agents_alert #ff5d7a #070d0a"
 		"pwd #8fd694 #070d0a"
 		"load #131c17 #ff9e48"
 		"battery #ffc24a #070d0a"

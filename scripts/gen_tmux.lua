@@ -21,9 +21,6 @@ local sub = {
   session   = p.string,    -- session (mint/teal)
   host      = p.func,      -- hostname (blue)
   branch    = p.keyword,   -- vcs branch (violet)
-  focus     = p.keyword,
-  agents    = p.accent2,
-  alert     = p.error,
   path      = p.string,
   load      = p.number,
   battery   = p.warn,
@@ -100,9 +97,6 @@ fi
 # shellcheck disable=SC1143,SC2128
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
 	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-		"focus_mode {{focus}} {{dark}}"
-		"claude_agents {{agents}} {{dark}}"
-		"claude_agents_alert {{alert}} {{dark}}"
 		"pwd {{path}} {{dark}}"
 		"load {{surface}} {{load}}"
 		"battery {{battery}} {{dark}}"
