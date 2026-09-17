@@ -136,10 +136,12 @@ lua/lazypunk/palettes/                       -- one table per variant (the singl
 tmux/lazypunk-*.conf                          -- generated native tmux themes
 lazypunk.tmux                                 -- TPM entry point (sources tmux/ by @lazypunk_variant)
 tmux-powerline/themes/lazypunk-*.sh          -- generated tmux-powerline themes
+wt/lazypunk-*.json                            -- generated Windows Terminal color schemes
 scripts/gen_tmux_conf.lua                     -- palette -> native tmux theme
 scripts/gen_tmux.lua                          -- palette -> tmux-powerline theme
 scripts/gen_showcase.lua                      -- palette -> Neovim editor SVG (README)
 scripts/gen_tmux_showcase.lua                 -- palette -> tmux status-bar SVG (README)
+scripts/gen_wt.lua                            -- palette -> Windows Terminal scheme
 scripts/gen_readme.lua                         -- palette headers -> README Variants section
 ```
 
@@ -152,6 +154,7 @@ nvim --headless -l scripts/gen_tmux.lua <variant> tmux-powerline/themes/lazypunk
 nvim --headless -l scripts/gen_tmux_conf.lua <variant> tmux/lazypunk-<variant>.conf
 nvim --headless -l scripts/gen_showcase.lua <variant> assets/showcase-<variant>.svg
 nvim --headless -l scripts/gen_tmux_showcase.lua <variant> assets/tmux-<variant>.svg
+nvim --headless -l scripts/gen_wt.lua <variant> wt/lazypunk-<variant>.json
 nvim --headless -l scripts/gen_readme.lua README.md
 ```
 
@@ -168,6 +171,19 @@ require("lazypunk").load("<name>")
 
 Regenerate and the theme, both showcases, and the README Variants entry all
 appear.
+
+## Windows Terminal
+
+Each variant ships a generated scheme in `wt/lazypunk-<variant>.json`. Copy the
+object into the `schemes` array of Windows Terminal's `settings.json`, then set
+the profile's color scheme:
+
+```json
+"colorScheme": "lazypunk-rebecca"
+```
+
+Terminal programs (shell, `ls`, git, Neovim's `:terminal`) then draw with the
+same 16 ANSI colors the Neovim theme uses.
 
 ## Website
 

@@ -1,0 +1,23 @@
+{
+    "name": "lazypunk-rebecca",
+    "background": "#0d1512",
+    "foreground": "#d5e4d8",
+    "cursorColor": "#ff6e9c",
+    "selectionBackground": "#234032",
+    "black": "#17211b",
+    "red": "#ff5d7a",
+    "green": "#8fd694",
+    "yellow": "#ffc24a",
+    "blue": "#57c4bb",
+    "purple": "#ff6e9c",
+    "cyan": "#6dd0c0",
+    "white": "#a9c4b3",
+    "brightBlack": "#2c4438",
+    "brightRed": "#ff86a0",
+    "brightGreen": "#a9e2ac",
+    "brightYellow": "#ffcf6e",
+    "brightBlue": "#7ad6cd",
+    "brightPurple": "#ff92b6",
+    "brightCyan": "#8fe0d5",
+    "brightWhite": "#d5e4d8"
+}

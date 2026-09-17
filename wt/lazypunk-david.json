@@ -1,0 +1,23 @@
+{
+    "name": "lazypunk-david",
+    "background": "#0b0c09",
+    "foreground": "#e6e8e0",
+    "cursorColor": "#eddd3c",
+    "selectionBackground": "#2b2f21",
+    "black": "#181a14",
+    "red": "#ff5a4d",
+    "green": "#93c46f",
+    "yellow": "#eddd3c",
+    "blue": "#5fc9c2",
+    "purple": "#ff8663",
+    "cyan": "#5fc9c2",
+    "white": "#a7a99b",
+    "brightBlack": "#33372a",
+    "brightRed": "#ff7a6b",
+    "brightGreen": "#a9d488",
+    "brightYellow": "#f7ef2e",
+    "brightBlue": "#7fd8d1",
+    "brightPurple": "#ff9b7d",
+    "brightCyan": "#7fd8d1",
+    "brightWhite": "#e6e8e0"
+}
