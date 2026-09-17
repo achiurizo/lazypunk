@@ -33,6 +33,7 @@ jobs:
             nvim --headless -l scripts/gen_tmux_conf.lua "$v" "tmux/lazypunk-$v.conf"
             nvim --headless -l scripts/gen_showcase.lua "$v" "assets/showcase-$v.svg"
             nvim --headless -l scripts/gen_tmux_showcase.lua "$v" "assets/tmux-$v.svg"
+            nvim --headless -l scripts/gen_wt.lua "$v" "wt/lazypunk-$v.json"
           done
           nvim --headless -l scripts/gen_readme.lua README.md
 

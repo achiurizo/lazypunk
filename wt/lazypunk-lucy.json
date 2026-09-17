@@ -1,0 +1,23 @@
+{
+    "name": "lazypunk-lucy",
+    "background": "#0f0d1e",
+    "foreground": "#e7dcf0",
+    "cursorColor": "#c264e0",
+    "selectionBackground": "#2a2450",
+    "black": "#1a1733",
+    "red": "#ff5d8f",
+    "green": "#7ef0d0",
+    "yellow": "#ffc14d",
+    "blue": "#5b8cff",
+    "purple": "#c264e0",
+    "cyan": "#5bd6ff",
+    "white": "#b1aaef",
+    "brightBlack": "#3a3560",
+    "brightRed": "#ff87ab",
+    "brightGreen": "#9ff5dd",
+    "brightYellow": "#ffd27a",
+    "brightBlue": "#84a9ff",
+    "brightPurple": "#d68cf0",
+    "brightCyan": "#8ee4ff",
+    "brightWhite": "#e7dcf0"
+}

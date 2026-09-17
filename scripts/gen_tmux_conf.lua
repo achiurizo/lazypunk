@@ -18,6 +18,7 @@ local sub = {
   p_bg          = p.bg,
   p_bg_dark     = p.bg_dark,
   p_bg_float    = p.bg_float,
+  p_bg_sel      = p.bg_sel,
   p_border      = p.border,
   p_fg          = p.fg,
   p_fg_dim      = p.fg_dim,
@@ -65,6 +66,7 @@ set -g @lazypunk_variant "{{variant}}"
 set -g @lazypunk_bg       "{{p_bg}}"
 set -g @lazypunk_bg_dark  "{{p_bg_dark}}"
 set -g @lazypunk_bg_float "{{p_bg_float}}"
+set -g @lazypunk_bg_sel   "{{p_bg_sel}}"
 set -g @lazypunk_border   "{{p_border}}"
 set -g @lazypunk_fg      "{{p_fg}}"
 set -g @lazypunk_fg_dim  "{{p_fg_dim}}"
