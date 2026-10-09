@@ -7,7 +7,7 @@ local readme = arg[1] or 'README.md'
 local palette_dir = 'lua/lazypunk/palettes'
 
 -- Known display order; any palette not listed is appended alphabetically.
-local order = { 'lucy', 'david', 'rebecca' }
+local order = { 'lucy', 'david', 'rebecca', 'sasha' }
 
 -- Discover variants from the palette files.
 local present = {}

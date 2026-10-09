@@ -78,7 +78,7 @@ Via [TPM](https://github.com/tmux-plugins/tpm):
 
 ```tmux
 set -g @plugin 'achiurizo/lazypunk'
-set -g @lazypunk_variant 'lucy'   # optional: lucy (default), david, rebecca
+set -g @lazypunk_variant 'lucy'   # optional: lucy (default), david, rebecca, sasha
 ```
 
 Or source a variant directly (no TPM):
@@ -107,8 +107,8 @@ hardcoding them - same role names as the Neovim theme:
 # tmux show-option -gqv @lazypunk_accent   ->  #c264e0
 @lazypunk_variant  @lazypunk_bg       @lazypunk_bg_dark  @lazypunk_bg_float
 @lazypunk_border   @lazypunk_fg       @lazypunk_fg_dim   @lazypunk_comment
-@lazypunk_string   @lazypunk_keyword  @lazypunk_number   @lazypunk_accent
-@lazypunk_accent2  @lazypunk_warn     @lazypunk_error
+@lazypunk_string   @lazypunk_keyword  @lazypunk_number   @lazypunk_func
+@lazypunk_accent   @lazypunk_accent2  @lazypunk_warn     @lazypunk_error
 ```
 
 ### tmux-powerline (optional)
@@ -128,7 +128,7 @@ A Nerd/Powerline-patched font gives the arrow separators.
 ## Structure
 
 ```
-colors/lazypunk-{lucy,david,rebecca}.lua   -- :colorscheme entry points
+colors/lazypunk-{lucy,david,rebecca,sasha}.lua   -- :colorscheme entry points
 lua/lazypunk/init.lua                       -- M.load(name)
 lua/lazypunk/theme.lua                       -- assembles highlight groups from palette
 lua/lazypunk/groups/                         -- editor, syntax, treesitter, lsp (pure palette -> hl table)

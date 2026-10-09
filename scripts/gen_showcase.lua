@@ -13,7 +13,7 @@ local sample = {
   '-- lazypunk: palette-driven colorscheme',
   'local M = {}',
   '',
-  'local palettes = { "lucy", "david", "rebecca" }',
+  'local palettes = { "lucy", "david", "rebecca", "sasha" }',
   '',
   'function M.load(name)',
   '  name = name or "lucy"',

@@ -16,7 +16,7 @@ local REQUIRED = {
   'accent','accent2',
 }
 
-local order_pref = { 'lucy', 'david', 'rebecca' }
+local order_pref = { 'lucy', 'david', 'rebecca', 'sasha' }
 
 -- Discover variants.
 local present = {}
