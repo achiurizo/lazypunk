@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # TPM entry point for the lazypunk tmux theme.
 #   set -g @plugin 'achiurizo/lazypunk'
-#   set -g @lazypunk_variant 'lucy'   # optional: lucy (default), david, rebecca
+#   set -g @lazypunk_variant 'lucy'   # optional: lucy (default), david, rebecca, sasha
 # Sources the matching native theme in tmux/, falling back to lucy if the
 # requested variant does not exist.
 set -euo pipefail

@@ -26,6 +26,7 @@ local sub = {
   p_string      = p.string,
   p_keyword     = p.keyword,
   p_number      = p.number,
+  p_func        = p.func,
   p_accent      = p.accent,
   p_accent2     = p.accent2,
   p_warn        = p.warn,
@@ -74,6 +75,7 @@ set -g @lazypunk_comment "{{p_comment}}"
 set -g @lazypunk_string  "{{p_string}}"
 set -g @lazypunk_keyword "{{p_keyword}}"
 set -g @lazypunk_number  "{{p_number}}"
+set -g @lazypunk_func    "{{p_func}}"
 set -g @lazypunk_accent  "{{p_accent}}"
 set -g @lazypunk_accent2 "{{p_accent2}}"
 set -g @lazypunk_warn    "{{p_warn}}"
