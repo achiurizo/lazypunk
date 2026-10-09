@@ -27,6 +27,12 @@ adding a palette - nothing else.
 <img alt="lazypunk-rebecca Neovim" src="assets/showcase-rebecca.svg" width="512">
 <br>
 <img alt="lazypunk-rebecca tmux" src="assets/tmux-rebecca.svg" width="512">
+
+### `lazypunk-sasha` — violet-black ground, periwinkle and pink neon, mint strings
+
+<img alt="lazypunk-sasha Neovim" src="assets/showcase-sasha.svg" width="512">
+<br>
+<img alt="lazypunk-sasha tmux" src="assets/tmux-sasha.svg" width="512">
 <!-- variants:end -->
 
 ## Requirements

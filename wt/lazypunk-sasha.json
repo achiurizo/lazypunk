@@ -1,0 +1,23 @@
+{
+    "name": "lazypunk-sasha",
+    "background": "#110b20",
+    "foreground": "#ebdff5",
+    "cursorColor": "#e058f5",
+    "selectionBackground": "#33225c",
+    "black": "#1d1536",
+    "red": "#ff5370",
+    "green": "#7ef0d0",
+    "yellow": "#ffc14d",
+    "blue": "#8d9bff",
+    "purple": "#e058f5",
+    "cyan": "#7fd4ff",
+    "white": "#bda9f2",
+    "brightBlack": "#40306b",
+    "brightRed": "#ff7d93",
+    "brightGreen": "#9ff5dd",
+    "brightYellow": "#ffd27a",
+    "brightBlue": "#aab4ff",
+    "brightPurple": "#ec8cf8",
+    "brightCyan": "#a8e2ff",
+    "brightWhite": "#ebdff5"
+}

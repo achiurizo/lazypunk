@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="410" viewBox="0 0 512 410" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
-<rect x="0" y="0" width="512" height="410" rx="10" fill="#0d1512"/>
-<rect x="0" y="0" width="512" height="34" rx="10" fill="#131c17"/>
-<rect x="0" y="22" width="512" height="12" fill="#131c17"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="538" height="410" viewBox="0 0 538 410" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+<rect x="0" y="0" width="538" height="410" rx="10" fill="#0d1512"/>
+<rect x="0" y="0" width="538" height="34" rx="10" fill="#131c17"/>
+<rect x="0" y="22" width="538" height="12" fill="#131c17"/>
 <circle cx="18" cy="17" r="6" fill="#ff5f57"/>
 <circle cx="38" cy="17" r="6" fill="#febc2e"/>
 <circle cx="58" cy="17" r="6" fill="#28c840"/>
-<text x="256" y="22" fill="#d5e4d8" opacity="0.85" text-anchor="middle">lazypunk-rebecca.lua</text>
+<text x="269" y="22" fill="#d5e4d8" opacity="0.85" text-anchor="middle">lazypunk-rebecca.lua</text>
 <text x="41" y="52.0" fill="#4a6355" text-anchor="end" opacity="0.9">1</text>
 <text x="51.2" y="52.0" fill="#5f7568" font-style="italic" xml:space="preserve">-- lazypunk: palette-driven colorscheme</text>
 <text x="41" y="72.0" fill="#4a6355" text-anchor="end" opacity="0.9">2</text>
@@ -27,8 +27,10 @@
 <text x="278.0" y="112.0" fill="#8fd694" xml:space="preserve">"david"</text>
 <text x="336.8" y="112.0" fill="#d5e4d8" xml:space="preserve">, </text>
 <text x="353.6" y="112.0" fill="#8fd694" xml:space="preserve">"rebecca"</text>
-<text x="429.2" y="112.0" fill="#d5e4d8" xml:space="preserve"> </text>
-<text x="437.6" y="112.0" fill="#eaa6c6" xml:space="preserve">}</text>
+<text x="429.2" y="112.0" fill="#d5e4d8" xml:space="preserve">, </text>
+<text x="446.0" y="112.0" fill="#8fd694" xml:space="preserve">"sasha"</text>
+<text x="504.8" y="112.0" fill="#d5e4d8" xml:space="preserve"> </text>
+<text x="513.2" y="112.0" fill="#eaa6c6" xml:space="preserve">}</text>
 <text x="41" y="132.0" fill="#4a6355" text-anchor="end" opacity="0.9">5</text>
 <text x="41" y="152.0" fill="#4a6355" text-anchor="end" opacity="0.9">6</text>
 <text x="51.2" y="152.0" fill="#57c4bb" xml:space="preserve">function</text>
@@ -86,9 +88,9 @@
 <text x="41" y="372.0" fill="#4a6355" text-anchor="end" opacity="0.9">17</text>
 <text x="51.2" y="372.0" fill="#ff6e9c" xml:space="preserve">return</text>
 <text x="101.6" y="372.0" fill="#d5e4d8" xml:space="preserve"> M</text>
-<rect x="0" y="386" width="512" height="24" fill="#131c17"/>
+<rect x="0" y="386" width="538" height="24" fill="#131c17"/>
 <rect x="0" y="386" width="70" height="24" fill="#57c4bb"/>
 <text x="14" y="402" fill="#0d1512" font-weight="bold">NORMAL</text>
 <text x="84" y="402" fill="#d5e4d8" opacity="0.9">lazypunk-rebecca</text>
-<text x="498" y="402" fill="#d5e4d8" opacity="0.9" text-anchor="end">lua utf-8  17:1</text>
+<text x="524" y="402" fill="#d5e4d8" opacity="0.9" text-anchor="end">lua utf-8  17:1</text>
 </svg>
