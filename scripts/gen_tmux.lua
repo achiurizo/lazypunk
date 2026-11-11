@@ -24,6 +24,13 @@ local sub = {
   path      = p.string,
   load      = p.number,
   battery   = p.warn,
+  -- Powerline arrows (Nerd Font private use area, U+E0B0-E0B3) as byte
+  -- escapes: the literal glyphs are invisible in most editors and tools, and
+  -- were lost from the template once already.
+  seplb     = '\238\130\178', -- U+E0B2 left bold
+  seplt     = '\238\130\179', -- U+E0B3 left thin
+  seprb     = '\238\130\176', -- U+E0B0 right bold
+  seprt     = '\238\130\177', -- U+E0B1 right thin
 }
 
 local template = [[
@@ -34,10 +41,10 @@ local template = [[
 # values render directly under a truecolor terminal.
 
 if tp_patched_font_in_use; then
-	TMUX_POWERLINE_SEPARATOR_LEFT_BOLD=""
-	TMUX_POWERLINE_SEPARATOR_LEFT_THIN=""
-	TMUX_POWERLINE_SEPARATOR_RIGHT_BOLD=""
-	TMUX_POWERLINE_SEPARATOR_RIGHT_THIN=""
+	TMUX_POWERLINE_SEPARATOR_LEFT_BOLD="{{seplb}}"
+	TMUX_POWERLINE_SEPARATOR_LEFT_THIN="{{seplt}}"
+	TMUX_POWERLINE_SEPARATOR_RIGHT_BOLD="{{seprb}}"
+	TMUX_POWERLINE_SEPARATOR_RIGHT_THIN="{{seprt}}"
 else
 	TMUX_POWERLINE_SEPARATOR_LEFT_BOLD="◀"
 	TMUX_POWERLINE_SEPARATOR_LEFT_THIN="❮"
